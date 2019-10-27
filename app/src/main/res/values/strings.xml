@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Hillfort App</string>
+    <string name="hw">Hello world</string>
+    <string name="emailPrompt">Email </string>
+    <string name="pwPrompt">Password</string>
+    <string name="pw2Prompt">Re-enter password</string>
+
+
+</resources>

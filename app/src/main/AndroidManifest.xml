@@ -3,13 +3,16 @@
     package="org.wit.hillfortapp">
 
     <application
+        android:name=".main.MainApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.HillfortActivity"></activity>
+        <activity android:name=".activities.HillFortListActivity"></activity>
+        <activity android:name=".activities.AddHillFortActivity" />
+        <activity android:name=".activities.HillfortActivity" />
         <activity android:name=".activities.RegisterActivity" />
         <activity
             android:name=".activities.MainActivity"

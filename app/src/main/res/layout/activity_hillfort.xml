@@ -1,9 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".activities.HillfortActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HillfortActivity">
 
+    <ImageView
+        android:id="@+id/addImage"
+        android:layout_width="223dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="514dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/aeriel_image" />
+
+    <Button
+        android:id="@+id/addHfButton"
+
+        android:layout_width="378dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="243dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="442dp"
+        android:text="Add Hillfort"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="205dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="311dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="233dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/magnifying_glass" />
+
+    <Button
+        android:id="@+id/viewHfButton"
+        android:layout_width="378dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="522dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="163dp"
+        android:text="View Hillforts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

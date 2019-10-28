@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_add_hill_fort.*
 import kotlinx.android.synthetic.main.activity_hillfort.*
+import kotlinx.android.synthetic.main.card_hillfort.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import org.jetbrains.anko.toast
@@ -16,11 +17,20 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
 
     var hillfort= HillfortModel()
     lateinit var app:MainApp
+    var edit=false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_hill_fort)
         app =application as MainApp
+
+        if(intent.hasExtra("hillfort_edit")){
+            edit=true
+            hillfort=intent.extras?.getParcelable<HillfortModel>("hillfort_edit")!!
+            hillfortTitle.setText(hillfort.name)
+            hillfortDescription.setText(hillfort.description)
+            AddHf.setText(R.string.save_hillfort)
+        }
 
         AddHf.setOnClickListener(){
             info{"pressed addhf"}
@@ -35,12 +45,12 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
             else{
                 hillfort.name=HillName
                 hillfort.description=HillDescription
-                app.hillforts.add(hillfort.copy())
+                app.hillforts.create(hillfort.copy())
                 info { "Hillfort Name :$HillName" }
                 info { "Hillfort Description: $HillDescription" }
-                for(i in app!!.hillforts.indices){
-                    info("Hillfort[$i]:${app!!.hillforts[i]}")
-                }
+
+                setResult(AppCompatActivity.RESULT_OK)
+                finish()
 
 
 

@@ -10,6 +10,7 @@ import org.jetbrains.anko.toast
 import org.wit.hillfortapp.R
 import org.wit.hillfortapp.models.HillfortModel
 import org.wit.hillfortapp.models.PersonModel
+import kotlin.system.exitProcess
 
 class LoginActivity : AppCompatActivity() ,AnkoLogger{
 
@@ -49,12 +50,10 @@ class LoginActivity : AppCompatActivity() ,AnkoLogger{
             startActivity(intent)
         }
 
+    }
 
-
-
-
-
-
+    override fun onBackPressed() {
+        super.onBackPressed()
 
 
     }

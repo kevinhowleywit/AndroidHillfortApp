@@ -1,5 +1,6 @@
 package org.wit.hillfortapp.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
@@ -36,6 +37,12 @@ class HillFortListActivity : AppCompatActivity(),HillfortListener {
 
 
         startActivityForResult(intentFor<AddHillFortActivity>().putExtra("hillfort_edit", hillfort), 0)
+    }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        recyclerView.adapter?.notifyDataSetChanged()
+        super.onActivityResult(requestCode, resultCode, data)
     }
 }
 /*

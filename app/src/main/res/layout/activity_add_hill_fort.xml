@@ -11,9 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="78dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="556dp"
+        android:layout_marginBottom="608dp"
         android:ems="10"
         android:hint="Hillfort Name"
         android:inputType="textPersonName"
@@ -23,14 +23,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
         android:id="@+id/hfDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="217dp"
+        android:layout_marginTop="162dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="469dp"
+        android:layout_marginBottom="524dp"
         android:ems="10"
         android:hint="Description"
         android:inputType="textPersonName"
@@ -44,13 +45,38 @@
         android:id="@+id/AddHf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="318dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="365dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="476dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="207dp"
         android:text="Add Hillfort"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/hillfortImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@+id/AddHf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/addImgBtn"
+        android:layout_width="105dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="255dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="424dp"
+        android:text="Add Image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

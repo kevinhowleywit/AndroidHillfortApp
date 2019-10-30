@@ -39,6 +39,7 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
             hfName.setText(hillfort.name)
             hfDesc.setText(hillfort.description)
             AddHf.setText(R.string.save_hillfort)
+            addImgBtn.setText(R.string.save_image)
             hillfortImage.setImageBitmap(readImageFromPath(this, hillfort.image))
 
         }
@@ -82,7 +83,19 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
             showImagePicker(this, IMAGE_REQUEST)
 
         }
+
+
+        locationBtn.setOnClickListener(){
+
+            info("set location pressed")
+        }
     }
+
+
+
+
+
+
     /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
@@ -96,6 +109,7 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
                 if (data != null) {
                     hillfort.image = data.getData().toString()
                     hillfortImage.setImageBitmap(readImage(this,resultCode,data))
+                    addImgBtn.setText(R.string.save_image)
                 }
             }
         }

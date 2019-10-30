@@ -8,6 +8,8 @@
     <string name="select_hillfort_image">Select Image</string>
     <string name="menu_addHillfort">Add</string>
     <string name="menu_cancelHillfort">Cancel</string>
+    <string name="save_image">Change Image</string>
+    <string name="location_button">Set Location</string>
 
 
 

@@ -7,7 +7,6 @@
     tools:context=".activities.AddHillFortActivity">
 
 
-
     <EditText
         android:id="@+id/hfName"
         android:layout_width="wrap_content"
@@ -54,8 +53,10 @@
         android:text="Add Hillfort"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/hillfortImage"
@@ -72,12 +73,28 @@
         android:layout_width="105dp"
         android:layout_height="52dp"
         android:layout_marginStart="154dp"
-        android:layout_marginTop="255dp"
+        android:layout_marginTop="324dp"
         android:layout_marginEnd="154dp"
-        android:layout_marginBottom="424dp"
+        android:layout_marginBottom="355dp"
         android:text="Add Image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/locationBtn"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="242dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/location_button"
+        app:layout_constraintBottom_toTopOf="@+id/addImgBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

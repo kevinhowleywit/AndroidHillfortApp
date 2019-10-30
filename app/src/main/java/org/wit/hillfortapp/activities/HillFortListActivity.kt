@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import org.wit.hillfortapp.R
 import org.wit.hillfortapp.main.MainApp
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,9 +24,13 @@ class HillFortListActivity : AppCompatActivity(),HillfortListener {
 
         lateinit var app:MainApp
 
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hill_fort_list)
         app=application as MainApp
+
+
 
         val layoutManager=LinearLayoutManager(this)
         recyclerView.layoutManager=layoutManager
@@ -34,8 +39,6 @@ class HillFortListActivity : AppCompatActivity(),HillfortListener {
 
     override fun onHillfortClick(hillfort: HillfortModel) {
         //startActivityForResult(intentFor<AddHillFortActivity>(),0)
-
-
         startActivityForResult(intentFor<AddHillFortActivity>().putExtra("hillfort_edit", hillfort), 0)
     }
 
@@ -44,6 +47,7 @@ class HillFortListActivity : AppCompatActivity(),HillfortListener {
         recyclerView.adapter?.notifyDataSetChanged()
         super.onActivityResult(requestCode, resultCode, data)
     }
+
 }
 /*
 class HillfortAdapter constructor(private var hillforts: List<HillfortModel>) :

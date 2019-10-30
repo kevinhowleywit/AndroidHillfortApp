@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".activities.AddHillFortActivity">
 
+
+
     <EditText
         android:id="@+id/hfName"
         android:layout_width="wrap_content"

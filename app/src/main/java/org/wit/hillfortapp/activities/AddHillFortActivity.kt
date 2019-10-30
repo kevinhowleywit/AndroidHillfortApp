@@ -3,7 +3,10 @@ package org.wit.hillfortapp.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_add_hill_fort.*
+import kotlinx.android.synthetic.main.activity_hill_fort_list.*
 import kotlinx.android.synthetic.main.activity_hillfort.*
 import kotlinx.android.synthetic.main.card_hillfort.*
 import org.jetbrains.anko.AnkoLogger
@@ -11,6 +14,7 @@ import org.jetbrains.anko.info
 import org.jetbrains.anko.toast
 import org.wit.hillfortapp.R
 import org.wit.hillfortapp.helpers.readImage
+import org.wit.hillfortapp.helpers.readImageFromPath
 import org.wit.hillfortapp.helpers.showImagePicker
 import org.wit.hillfortapp.main.MainApp
 import org.wit.hillfortapp.models.HillfortModel
@@ -24,6 +28,7 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
     val IMAGE_REQUEST = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_hill_fort)
         app =application as MainApp
@@ -31,9 +36,11 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
         if(intent.hasExtra("hillfort_edit")){
             edit=true
             hillfort=intent.extras?.getParcelable<HillfortModel>("hillfort_edit")!!
-            hillfortTitle.setText(hillfort.name)
-            hillfortDescription.setText(hillfort.description)
+            hfName.setText(hillfort.name)
+            hfDesc.setText(hillfort.description)
             AddHf.setText(R.string.save_hillfort)
+            hillfortImage.setImageBitmap(readImageFromPath(this, hillfort.image))
+
         }
 
         AddHf.setOnClickListener(){
@@ -76,6 +83,10 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
 
         }
     }
+    /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }*/
 
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -89,5 +100,15 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
             }
         }
     }
+
+    /*override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.item_cancel -> {
+                finish()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }*/
+
 
 }

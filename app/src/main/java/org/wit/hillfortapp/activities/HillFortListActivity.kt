@@ -20,22 +20,21 @@ import org.wit.hillfortapp.models.HillfortModel
 
 class HillFortListActivity : AppCompatActivity(),HillfortListener {
 
+    lateinit var app:MainApp
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
-
-        lateinit var app:MainApp
-
-
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hill_fort_list)
         app=application as MainApp
 
-
-
         val layoutManager=LinearLayoutManager(this)
         recyclerView.layoutManager=layoutManager
-        recyclerView.adapter=HillfortAdapter(app.hillforts.findAll(),this)
+        //recyclerView.adapter=HillfortAdapter(app.hillforts.findAll(),this)
+        loadHillforts()
     }
+
 
     override fun onHillfortClick(hillfort: HillfortModel) {
         //startActivityForResult(intentFor<AddHillFortActivity>(),0)
@@ -43,10 +42,32 @@ class HillFortListActivity : AppCompatActivity(),HillfortListener {
     }
 
 
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        recyclerView.adapter?.notifyDataSetChanged()
+        loadHillforts()
+        //recyclerView.adapter?.notifyDataSetChanged()
         super.onActivityResult(requestCode, resultCode, data)
     }
+
+    private fun loadHillforts() {
+        showHillforts(app.hillforts.findAll())
+    }
+
+    fun showHillforts (hillforts: List<HillfortModel>) {
+        recyclerView.adapter = HillfortAdapter(hillforts, this)
+        recyclerView.adapter?.notifyDataSetChanged()
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 }
 /*

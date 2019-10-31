@@ -33,8 +33,9 @@ class LoginActivity : AppCompatActivity() ,AnkoLogger{
             else{
 
                 info { "got to the else loop" }
-
                 //TODO login validation
+
+
                 val intent = Intent(this, HillfortActivity::class.java)
                 startActivity(intent)
 

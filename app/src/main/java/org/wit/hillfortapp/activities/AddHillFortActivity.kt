@@ -21,6 +21,7 @@ import org.jetbrains.anko.info
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
 import org.wit.hillfortapp.R
+import org.wit.hillfortapp.helpers.read
 import org.wit.hillfortapp.helpers.readImage
 import org.wit.hillfortapp.helpers.readImageFromPath
 import org.wit.hillfortapp.helpers.showImagePicker
@@ -55,6 +56,7 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
             AddHf.setText(R.string.save_hillfort)
             addImgBtn.setText(R.string.save_image)
             hillfortImage.setImageBitmap(readImageFromPath(this, hillfort.image))
+            hillfortImage2.setImageBitmap(readImageFromPath(this,hillfort.image2))
 
         }
 

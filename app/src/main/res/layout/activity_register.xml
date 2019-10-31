@@ -70,9 +70,6 @@
 
     <EditText
         android:id="@+id/pwPrompt2"
-        android:hint="@string/pw2Prompt"
-        android:textAlignment="center"
-        android:textColor="@color/primaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="103dp"
@@ -80,7 +77,10 @@
         android:layout_marginEnd="95dp"
         android:layout_marginBottom="150dp"
         android:ems="10"
+        android:hint="@string/pw2Prompt"
         android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="@color/primaryText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

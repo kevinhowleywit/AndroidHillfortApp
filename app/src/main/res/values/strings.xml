@@ -12,6 +12,7 @@
     <string name="save_image">Change Image</string>
     <string name="location_button">Set Location</string>
     <string name="title_activity_map">Map</string>
+    <string name="change_location">Change Location</string>
 
 
 </resources>

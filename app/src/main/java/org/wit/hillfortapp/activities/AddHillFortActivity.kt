@@ -6,6 +6,13 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_add_hill_fort.*
+import kotlinx.android.synthetic.main.activity_add_hill_fort.AddHf
+import kotlinx.android.synthetic.main.activity_add_hill_fort.addImgBtn
+import kotlinx.android.synthetic.main.activity_add_hill_fort.hfDesc
+import kotlinx.android.synthetic.main.activity_add_hill_fort.hfName
+import kotlinx.android.synthetic.main.activity_add_hill_fort.hillfortImage
+import kotlinx.android.synthetic.main.activity_add_hill_fort.locationBtn
+import kotlinx.android.synthetic.main.activity_add_hillfort_v2.*
 import kotlinx.android.synthetic.main.activity_hill_fort_list.*
 import kotlinx.android.synthetic.main.activity_hillfort.*
 import kotlinx.android.synthetic.main.card_hillfort.*
@@ -35,7 +42,7 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_hill_fort)
+        setContentView(R.layout.activity_add_hillfort_v2)
         app =application as MainApp
 
         if(intent.hasExtra("hillfort_edit")){
@@ -43,6 +50,7 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
             hillfort=intent.extras?.getParcelable<HillfortModel>("hillfort_edit")!!
             hfName.setText(hillfort.name)
             hfDesc.setText(hillfort.description)
+            locationBtn.setText(R.string.change_location)
 
             AddHf.setText(R.string.save_hillfort)
             addImgBtn.setText(R.string.save_image)
@@ -95,9 +103,9 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
             val location = Location(52.3483333, -7.1252777,15f)
 
             if(hillfort.zoom != 0f){
-                hillfort.lat=hillfort.lat
-                hillfort.lng=hillfort.lng
-                hillfort.zoom=hillfort.zoom
+                location.lat=hillfort.lat
+                location.lng=hillfort.lng
+                location.zoom=hillfort.zoom
 
             }
             startActivityForResult(intentFor<MapActivity>().putExtra("location", location), LOCATION_REQUEST)
@@ -105,17 +113,6 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
 
 
     }
-
-
-
-
-
-
-    /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return super.onCreateOptionsMenu(menu)
-    }*/
-
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -132,15 +129,22 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
             LOCATION_REQUEST -> {
                 if(data != null){
                     val location = data.extras?.getParcelable<Location>("location")!!
-                    hillfort.lat=hillfort.lat
-                    hillfort.lng=hillfort.lng
-                    hillfort.zoom=hillfort.zoom
+                    hillfort.lat=location.lat
+                    hillfort.lng=location.lng
+                    hillfort.zoom=location.zoom
 
 
                 }
             }
         }
     }
+
+
+    /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }*/
+
 
     /*override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {

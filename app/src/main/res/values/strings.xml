@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Hillfort App</string>
+    <string name="hfName">Hillfort Name</string>
     <string name="hw">Hello world</string>
     <string name="emailPrompt">Email </string>
     <string name="pwPrompt">Password</string>
@@ -10,8 +11,7 @@
     <string name="menu_cancelHillfort">Cancel</string>
     <string name="save_image">Change Image</string>
     <string name="location_button">Set Location</string>
-
-
+    <string name="title_activity_map">Map</string>
 
 
 </resources>

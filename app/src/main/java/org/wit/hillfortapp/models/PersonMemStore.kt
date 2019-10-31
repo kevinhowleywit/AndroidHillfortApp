@@ -13,7 +13,7 @@ class PersonMemStore:PersonStore,AnkoLogger{
     }
 
 
-    override fun findAll(): List<PersonModel> {
+    override fun findAll(): ArrayList<PersonModel> {
         return people
     }
 

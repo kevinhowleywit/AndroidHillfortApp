@@ -21,11 +21,19 @@ class LoginActivity : AppCompatActivity() ,AnkoLogger{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        app = application as MainApp
+
         var hillfort= HillfortModel()
-        
+        var people=ArrayList<PersonModel>()
+        people=app.people.findAll()
+
+        people.forEach{info("${it} from login acticity")}
+
+
+
         loginButton.setOnClickListener(){
 
-            app = application as MainApp
 
 
             info("login button pressed" )
@@ -41,9 +49,23 @@ class LoginActivity : AppCompatActivity() ,AnkoLogger{
                 info { "got to the else loop" }
                 //TODO login validation
                 try {
+                    val personToLogin = PersonModel()
+                    personToLogin.email=email
+                    personToLogin.password=password
+
+                    if (people.contains(personToLogin)){
+                        info("person: ${personToLogin.email}")
+                        val intent = Intent(this, HillfortActivity::class.java)
+                        startActivity(intent)
 
 
+                    }
 
+                    else{
+                        info("else loop of login validation")
+                        toast("Account not found")
+
+                    }
 
                 }
 
@@ -52,8 +74,8 @@ class LoginActivity : AppCompatActivity() ,AnkoLogger{
                 }
 
 
-                val intent = Intent(this, HillfortActivity::class.java)
-                startActivity(intent)
+                //val intent = Intent(this, HillfortActivity::class.java)
+                //startActivity(intent)
 
 
             }

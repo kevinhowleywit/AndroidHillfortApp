@@ -44,7 +44,7 @@ class RegisterActivity : AppCompatActivity(), AnkoLogger{
                 if(password.equals(confPassword)){
                     person.email=email
                     person.password=password
-                    app.people.create(person)
+                    app.people.create(person.copy())
                     toast("Registered Successfully")
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)

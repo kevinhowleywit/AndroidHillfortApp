@@ -6,12 +6,21 @@ import org.jetbrains.anko.info
 class PersonMemStore:PersonStore,AnkoLogger{
 
     val people=ArrayList<PersonModel>()
+
+    var lastId = 0L
+    internal fun getId(): Long {
+        return lastId++
+    }
+
+
     override fun findAll(): List<PersonModel> {
         return people
     }
 
     override fun create(person: PersonModel) {
+        person.id=getId()
         people.add(person)
+        logAll()
     }
 
     fun logAll(){

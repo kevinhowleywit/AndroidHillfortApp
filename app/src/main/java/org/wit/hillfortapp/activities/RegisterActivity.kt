@@ -1,5 +1,6 @@
 package org.wit.hillfortapp.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_login.*
@@ -25,6 +26,8 @@ class RegisterActivity : AppCompatActivity(), AnkoLogger{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+        app = application as MainApp
+
         regBtn.setOnClickListener(){
             info("register button pressed from register activity")
 
@@ -36,6 +39,31 @@ class RegisterActivity : AppCompatActivity(), AnkoLogger{
                 toast("Please fill out all fields")
 
             }
+            else{
+
+                if(password.equals(confPassword)){
+                    person.email=email
+                    person.password=password
+                    app.people.create(person)
+                    toast("Registered Successfully")
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+
+                }
+
+                else{
+
+                    toast("Passwords do not match")
+                }
+
+
+
+
+
+
+            }
+
+
 
 
         }

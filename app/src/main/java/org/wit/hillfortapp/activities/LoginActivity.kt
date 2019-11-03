@@ -4,6 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_login.emailText
+import kotlinx.android.synthetic.main.activity_login.passwordText
+import kotlinx.android.synthetic.main.activity_login.regBtn
+import kotlinx.android.synthetic.main.activity_register.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import org.jetbrains.anko.toast
@@ -55,8 +59,14 @@ class LoginActivity : AppCompatActivity() ,AnkoLogger{
 
                     if (people.contains(personToLogin)){
                         info("person: ${personToLogin.email}")
+
+                        emailText.setText("")
+                        passwordText.setText("")
+
+
                         val intent = Intent(this, HillfortActivity::class.java)
                         startActivity(intent)
+
 
 
                     }

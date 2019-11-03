@@ -18,6 +18,8 @@ class HillfortActivity : AppCompatActivity(),AnkoLogger {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hillfort)
+        //trying to clear activity history so when you press back it goes to login screen without going back to register on second press
+        //intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
 
         addHfButton.setOnClickListener(){
 

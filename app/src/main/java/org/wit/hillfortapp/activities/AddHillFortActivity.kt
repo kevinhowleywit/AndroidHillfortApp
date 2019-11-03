@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import kotlinx.android.synthetic.main.activity_add_hill_fort.*
 import kotlinx.android.synthetic.main.activity_add_hill_fort.AddHf
 import kotlinx.android.synthetic.main.activity_add_hill_fort.addImgBtn
 import kotlinx.android.synthetic.main.activity_add_hill_fort.hfDesc
@@ -13,15 +12,11 @@ import kotlinx.android.synthetic.main.activity_add_hill_fort.hfName
 import kotlinx.android.synthetic.main.activity_add_hill_fort.hillfortImage
 import kotlinx.android.synthetic.main.activity_add_hill_fort.locationBtn
 import kotlinx.android.synthetic.main.activity_add_hillfort_v2.*
-import kotlinx.android.synthetic.main.activity_hill_fort_list.*
-import kotlinx.android.synthetic.main.activity_hillfort.*
-import kotlinx.android.synthetic.main.card_hillfort.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
 import org.wit.hillfortapp.R
-import org.wit.hillfortapp.helpers.read
 import org.wit.hillfortapp.helpers.readImage
 import org.wit.hillfortapp.helpers.readImageFromPath
 import org.wit.hillfortapp.helpers.showImagePicker
@@ -100,6 +95,11 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
 
         }
 
+        addOtherImageBtn.setOnClickListener(){
+            info("pressed add second image")
+            //showImagePicker(this,IMAGE_REQUEST)
+        }
+
         locationBtn.setOnClickListener{
             info("set location pressed")
             val location = Location(52.3483333, -7.1252777,15f)
@@ -142,20 +142,20 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
     }
 
 
-    /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
-    }*/
+    }
 
 
-    /*override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             R.id.item_cancel -> {
-                finish()
-            }
+                val intent = Intent(this, HillfortActivity::class.java)
+                startActivity(intent)            }
         }
         return super.onOptionsItemSelected(item)
-    }*/
+    }
 
 
 }

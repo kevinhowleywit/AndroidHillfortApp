@@ -100,9 +100,9 @@ class LoginActivity : AppCompatActivity() ,AnkoLogger{
         }
 
     }
-
+    // on back pressed brings you to home instead of the splash screen
     override fun onBackPressed() {
-        super.onBackPressed()
+        this.finishAffinity()
 
 
     }

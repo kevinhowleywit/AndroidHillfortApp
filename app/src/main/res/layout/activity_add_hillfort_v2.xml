@@ -66,6 +66,12 @@
                     android:text="Add Image"
                     android:textSize="16sp"/>
 
+                <Button
+                    android:id="@+id/addOtherImageBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add second image" />
+
                 <ImageView
                 android:id="@+id/hillfortImage"
                 android:layout_width="match_parent"
@@ -98,6 +104,7 @@
                     android:stateListAnimator="@null"
                     android:text="@string/menu_addHillfort"
                     android:textSize="16sp" />
+
             </LinearLayout>
         </ScrollView>
 

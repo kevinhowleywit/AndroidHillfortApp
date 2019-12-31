@@ -9,5 +9,11 @@
         android:title="Cancel"
         app:showAsAction="always"/>
 
+    <item
+        android:visible="false"
+        android:id="@+id/item_delete"
+        android:title="@string/menu_deleteHillfort"
+        app:showAsAction="always"/>
+
 </menu>
 

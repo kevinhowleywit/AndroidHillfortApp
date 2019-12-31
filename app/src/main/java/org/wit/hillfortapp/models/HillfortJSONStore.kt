@@ -52,7 +52,17 @@ class HillfortJSONStore : HillfortStore, AnkoLogger {
             foundHillfort.zoom=hillfort.zoom
             logAll()
         }
+        serialize()
 
+    }
+    override fun findById(id:Long) : HillfortModel? {
+        val foundHillfort: HillfortModel? = hillforts.find { it.id == id }
+        return foundHillfort
+    }
+
+    override fun delete(hillfort: HillfortModel) {
+        hillforts.remove(hillfort)
+        serialize()
     }
 
 

@@ -40,7 +40,7 @@ class PlacemarkJSONStore : PersonStore, AnkoLogger {
 
 
     override fun update(person: PersonModel) {
-        // todo
+
     }
 
     private fun serialize() {

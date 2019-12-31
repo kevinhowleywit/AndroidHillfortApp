@@ -47,6 +47,9 @@ class LoginActivity : AppCompatActivity() ,AnkoLogger{
             if(email.isEmpty() || password.isEmpty()){
                 info("login pressed :$email")
                 toast("Please fill out all fields")
+                //for testing to save login everytime
+                val intent = Intent(this, HillfortActivity::class.java)
+                startActivity(intent)
             }
             else{
 

@@ -51,7 +51,7 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
             AddHf.setText(R.string.save_hillfort)
             addImgBtn.setText(R.string.save_image)
             hillfortImage.setImageBitmap(readImageFromPath(this, hillfort.image))
-            hillfortImage2.setImageBitmap(readImageFromPath(this,hillfort.image2))
+            //hillfortImage2.setImageBitmap(readImageFromPath(this,hillfort.image2))
 
         }
 
@@ -94,11 +94,11 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
             showImagePicker(this, IMAGE_REQUEST)
 
         }
-
+        /*
         addOtherImageBtn.setOnClickListener(){
             info("pressed add second image")
             //showImagePicker(this,IMAGE_REQUEST)
-        }
+        }*/
 
         locationBtn.setOnClickListener{
             info("set location pressed")
@@ -144,6 +144,7 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
+        if(edit && menu != null) menu.getItem(1).setVisible(true)
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -152,7 +153,12 @@ class AddHillFortActivity : AppCompatActivity(),AnkoLogger {
         when (item?.itemId) {
             R.id.item_cancel -> {
                 val intent = Intent(this, HillfortActivity::class.java)
-                startActivity(intent)            }
+                startActivity(intent)}
+            R.id.item_delete ->{
+                app.hillforts.delete(hillfort)
+                val intent = Intent(this, HillFortListActivity::class.java)
+                startActivity(intent)
+            }
         }
         return super.onOptionsItemSelected(item)
     }

@@ -11,9 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d06c04c-774e-4db7-9c98-89f5ac22df98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/logout_icon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_hf_activity.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_hf_list.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillfortMapsActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_hillfort_maps.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_hillfort_maps.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -24,15 +25,28 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_16_0_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_16_0_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_16_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_maps_16_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_16_0_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_16_0_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_anko_commons_base_0_10_8_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_anko_commons_base_0_10_8_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/AddHillFortActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/AddHillFortActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillFortListActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillFortListActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillfortActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillfortActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/LoginActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/main/MainApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/main/MainApp.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortJSONStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortJSONStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortMemStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortMemStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortStore.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/PersonJSONStore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/PersonJSONStore.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_hillfort_v2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_hillfort_v2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_hf_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_hf_activity.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,19 +76,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/LoginActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1376">
-              <caret line="102" column="70" selection-start-line="102" selection-start-column="70" selection-end-line="102" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/AddHillFortActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1232">
-              <caret line="99" column="14" selection-start-line="99" selection-start-column="14" selection-end-line="99" selection-end-column="14" />
+            <state relative-caret-position="647">
+              <caret line="158" column="62" selection-start-line="158" selection-start-column="62" selection-end-line="158" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -82,80 +87,47 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillfortActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="443">
+              <caret line="60" column="53" lean-forward="true" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillfortMapsActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="39" column="76" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="76" />
               <folding>
-                <element signature="e#40#629#0" expanded="true" />
+                <element signature="e#40#352#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/MainActivity.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_hillfort_maps.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_hf_activity.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            <state relative-caret-position="176">
+              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillFortListActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_hf_list.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="13" lean-forward="true" selection-end-line="14" />
-              <folding>
-                <element signature="e#282#308#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/RegisterActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="50" column="39" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_hillfort_v2.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_hillfort_maps.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+            <state relative-caret-position="475">
+              <caret line="65" column="50" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
+              <folding>
+                <element signature="e#341#381#0" expanded="true" />
+              </folding>
             </state>
           </provider>
           <provider selected="true" editor-type-id="android-designer2" />
@@ -209,7 +181,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/card_hillfort.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/MapActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_hill_fort.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortMemStore.kt" />
         <option value="$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml" />
         <option value="$PROJECT_DIR$/app/.gitignore" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/helpers/FileHelpers.kt" />
@@ -218,50 +189,50 @@
         <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortModel.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/PersonModel.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortStore.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_hillfort.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortJSONStore.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/main/MainApp.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/PersonStore.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/PersonMemStore.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/RegisterActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/PersonJSONStore.kt" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_hillfort_v2.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_hf_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillFortListActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_hf_activity.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/AddHillFortActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/MainActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillfortActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/PersonJSONStore.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/main/MainApp.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/LoginActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_hillfort_v2.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/AddHillFortActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_hf_activity.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillfortActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_hillfort_maps.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_hillfort_maps.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortStore.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortMemStore.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortJSONStore.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillfortMapsActivity.kt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-2036" />
-    <option name="y" value="-1417" />
-    <option name="width" value="2560" />
-    <option name="height" value="1361" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
               <item name="HillfortApp" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="HillfortApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
             </path>
             <path>
               <item name="HillfortApp" type="1abcf292:AndroidViewProjectNode" />
@@ -291,13 +262,21 @@
             <path>
               <item name="HillfortApp" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="hillfortapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HillfortApp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="hillfortapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HillfortApp" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="HillfortApp" type="1abcf292:AndroidViewProjectNode" />
@@ -325,12 +304,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="WCV0219315002075" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-12-31T17:37:51.550Z" />
     <property name="ExportApk.ApkPath" value="$PROJECT_DIR$/app" />
     <property name="ExportApk.BuildVariants" value="release" />
     <property name="ExportApk.SignV2" value="true" />
@@ -339,6 +317,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="sync.plugin.last.upgrade.timestamp" value="1577821466585" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -440,11 +419,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2036" y="-1417" width="2560" height="1361" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49823737" visible="true" weight="0.3963463" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49823737" visible="true" weight="0.19527897" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.5010965" side_tool="true" weight="0.32962668" />
       <window_info id="Build Variants" order="4" sideWeight="0.5017626" side_tool="true" weight="0.3963463" />
@@ -452,14 +431,14 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.5319149" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.5313253" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32781717" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32939324" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.43814027" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.45421687" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="right" id="Preview" order="0" />
       <window_info anchor="right" id="Device File Explorer" order="1" sideWeight="0.50047755" side_tool="true" weight="0.32962668" />
@@ -540,16 +519,6 @@
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/MapActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1094">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="e#40#602#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -583,58 +552,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_hill_fort_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_hill_fort.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_hillfort.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortStore.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/main/MainApp.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/PersonStore.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortMemStore.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="14" selection-start-line="7" selection-end-line="8" />
-          <folding>
-            <element signature="e#36#103#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -654,10 +575,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/helpers/FileHelpers.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -680,13 +597,6 @@
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/PersonJSONStore.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="689">
@@ -695,18 +605,10 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortJSONStore.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/splash_logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
@@ -715,13 +617,7 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-        </state>
-      </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/helpers/ImageHelpers.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -729,48 +625,6 @@
           <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_hf_activity.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillFortListActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_hf_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" lean-forward="true" selection-end-line="14" />
-          <folding>
-            <element signature="e#282#308#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_hillfort_v2.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/RegisterActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -786,27 +640,184 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillfortActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/PersonJSONStore.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="523">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/main/MainApp.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillFortListActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
           <folding>
-            <element signature="e#40#629#0" expanded="true" />
+            <element signature="e#40#580#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_hill_fort_list.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/MapActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="e#40#602#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_hf_list.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_hillfort_v2.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_hill_fort.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/LoginActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1376">
-          <caret line="102" column="70" selection-start-line="102" selection-start-column="70" selection-end-line="102" selection-end-column="70" />
+        <state relative-caret-position="237">
+          <caret line="50" column="16" lean-forward="true" selection-start-line="50" selection-start-column="16" selection-end-line="51" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/AddHillFortActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1232">
-          <caret line="99" column="14" selection-start-line="99" selection-start-column="14" selection-end-line="99" selection-end-column="14" />
+        <state relative-caret-position="647">
+          <caret line="158" column="62" selection-start-line="158" selection-start-column="62" selection-end-line="158" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding>
+            <element signature="e#349#378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_hf_activity.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillfortActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="60" column="53" lean-forward="true" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_hillfort.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_hillfort_maps.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_hillfort_maps.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="65" column="50" selection-start-line="65" selection-start-column="50" selection-end-line="65" selection-end-column="50" />
+          <folding>
+            <element signature="e#341#381#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortMemStore.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
+          <folding>
+            <element signature="e#36#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortJSONStore.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="58" column="53" selection-start-line="58" selection-start-column="53" selection-end-line="58" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/models/HillfortStore.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/org/wit/hillfortapp/activities/HillfortMapsActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="39" column="76" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="76" />
+          <folding>
+            <element signature="e#40#352#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

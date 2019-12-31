@@ -13,7 +13,8 @@ import androidx.core.app.ComponentActivity.ExtraData
 import androidx.core.content.ContextCompat.getSystemService
 import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.R
-
+import org.jetbrains.anko.startActivity
+import org.wit.hillfortapp.models.HillfortMemStore
 
 
 class HillfortActivity : AppCompatActivity(),AnkoLogger {
@@ -56,12 +57,14 @@ class HillfortActivity : AppCompatActivity(),AnkoLogger {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
+            org.wit.hillfortapp.R.id.item_map -> startActivity<HillfortMapsActivity>()
             org.wit.hillfortapp.R.id.item_logout -> {
                 val intent = Intent(this, LoginActivity::class.java)
                 this.startActivity(intent)
                 this.finishAffinity()
             }
         }
+
         return super.onOptionsItemSelected(item)
     }
 

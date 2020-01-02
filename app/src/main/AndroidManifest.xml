@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.HillfortMapsActivity"
+            android:name=".activities.views.map.HillfortMapsView"
             android:label="@string/title_activity_hillfort_maps"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <!--
@@ -33,11 +33,11 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activities.EditLocationActivity"
+            android:name=".activities.views.editLocation.EditLocationActivity"
             android:label="@string/title_activity_map" />
         <activity android:name=".activity_hill_fort_list" />
-        <activity android:name=".activities.HillFortListView" />
-        <activity android:name=".activities.AddHillFortView" />
+        <activity android:name=".activities.views.hillfortList.HillFortListView" />
+        <activity android:name=".activities.views.addHillfort.AddHillFortView" />
         <activity android:name=".activities.HillfortActivity" />
         <activity android:name=".activities.RegisterActivity" />
         <activity

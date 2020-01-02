@@ -9,12 +9,7 @@ import kotlinx.android.synthetic.main.activity_hillfort.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import org.wit.hillfortapp.models.HillfortModel
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-import android.R
 import org.jetbrains.anko.startActivity
-import org.wit.hillfortapp.models.HillfortMemStore
 
 
 class HillfortActivity : AppCompatActivity(),AnkoLogger {
@@ -35,7 +30,7 @@ class HillfortActivity : AppCompatActivity(),AnkoLogger {
 
             info { "Add hillfort button pressed" }
 
-            val intent = Intent(this, AddHillFortActivity::class.java)
+            val intent = Intent(this, AddHillFortView::class.java)
             startActivity(intent)
 
 
@@ -44,7 +39,7 @@ class HillfortActivity : AppCompatActivity(),AnkoLogger {
         viewHfButton.setOnClickListener() {
 
             info { "view hillfort button pressed" }
-            val intent = Intent(this, HillFortListActivity::class.java)
+            val intent = Intent(this, HillFortListView::class.java)
             startActivity(intent)
         }
     }

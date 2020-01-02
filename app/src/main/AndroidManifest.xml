@@ -33,11 +33,11 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activities.MapActivity"
+            android:name=".activities.EditLocationActivity"
             android:label="@string/title_activity_map" />
         <activity android:name=".activity_hill_fort_list" />
-        <activity android:name=".activities.HillFortListActivity" />
-        <activity android:name=".activities.AddHillFortActivity" />
+        <activity android:name=".activities.HillFortListView" />
+        <activity android:name=".activities.AddHillFortView" />
         <activity android:name=".activities.HillfortActivity" />
         <activity android:name=".activities.RegisterActivity" />
         <activity

@@ -3,7 +3,6 @@ package org.wit.hillfortapp.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.emailText
 import kotlinx.android.synthetic.main.activity_login.passwordText
 import kotlinx.android.synthetic.main.activity_login.regBtn
@@ -12,6 +11,7 @@ import org.wit.hillfortapp.R
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import org.jetbrains.anko.toast
+import org.wit.hillfortapp.activities.views.login.LoginView
 import org.wit.hillfortapp.main.MainApp
 import org.wit.hillfortapp.models.PersonModel
 
@@ -50,7 +50,7 @@ class RegisterActivity : AppCompatActivity(), AnkoLogger{
                     passwordText.setText("")
                     pwPrompt2.setText("")
 
-                    val intent = Intent(this, LoginActivity::class.java)
+                    val intent = Intent(this, LoginView::class.java)
                     startActivity(intent)
 
                 }

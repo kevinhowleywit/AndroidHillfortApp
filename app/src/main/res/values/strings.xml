@@ -16,6 +16,9 @@
     <string name="menu_deleteHillfort">Delete</string>
     <string name="title_activity_hillfort_maps">Map of Hillforts</string>
     <string name="menu_saveHillfort">Save</string>
+    <string name="title_activity_hillfort_list">Hillforts</string>
+    <string name="title_activity_hillfort_add">Hillfort</string>
+    <string name="title_activity_edit_location">Hillfort</string>
 
 
 

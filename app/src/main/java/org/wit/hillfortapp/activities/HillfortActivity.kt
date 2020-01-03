@@ -12,6 +12,7 @@ import org.wit.hillfortapp.models.HillfortModel
 import org.jetbrains.anko.startActivity
 import org.wit.hillfortapp.activities.views.addHillfort.AddHillFortView
 import org.wit.hillfortapp.activities.views.hillfortList.HillFortListView
+import org.wit.hillfortapp.activities.views.login.LoginView
 import org.wit.hillfortapp.activities.views.map.HillfortMapsView
 
 
@@ -57,7 +58,7 @@ class HillfortActivity : AppCompatActivity(),AnkoLogger {
         when (item?.itemId) {
             org.wit.hillfortapp.R.id.item_map -> startActivity<HillfortMapsView>()
             org.wit.hillfortapp.R.id.item_logout -> {
-                val intent = Intent(this, LoginActivity::class.java)
+                val intent = Intent(this, LoginView::class.java)
                 this.startActivity(intent)
                 this.finishAffinity()
             }

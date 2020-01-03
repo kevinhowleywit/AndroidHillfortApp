@@ -8,6 +8,7 @@ import android.view.View
 import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.activity_splash.*
 import org.wit.hillfortapp.R
+import org.wit.hillfortapp.activities.views.login.LoginView
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             Handler().postDelayed(
                 {iv_logo.visibility= View.GONE
 
-                    startActivity(Intent(this, LoginActivity::class.java))},500)
+                    startActivity(Intent(this, LoginView::class.java))},500)
         },2500)
 
     }

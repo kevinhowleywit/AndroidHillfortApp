@@ -4,6 +4,8 @@ package org.wit.hillfortapp.activities.views.addHillfort
 import android.annotation.SuppressLint
 import android.content.Intent
 import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationCallback
+import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -13,6 +15,7 @@ import org.jetbrains.anko.intentFor
 import org.wit.hillfortapp.activities.views.*
 import org.wit.hillfortapp.activities.views.editLocation.EditLocationView
 import org.wit.hillfortapp.helpers.checkLocationPermissions
+import org.wit.hillfortapp.helpers.createDefaultLocationRequest
 import org.wit.hillfortapp.helpers.isPermissionGranted
 import org.wit.hillfortapp.helpers.showImagePicker
 import org.wit.hillfortapp.main.MainApp
@@ -28,6 +31,8 @@ class AddHillfortPresenter(view: BaseView):BasePresenter(view) {
     var defaultLocation = Location(52.245696, -7.139102, 15f)
     var edit = false;
     var locationService: FusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(view)
+    val locationRequest = createDefaultLocationRequest()
+
 
 
 
@@ -111,6 +116,20 @@ class AddHillfortPresenter(view: BaseView):BasePresenter(view) {
     fun doSetCurrentLocation() {
         locationService.lastLocation.addOnSuccessListener {
             locationUpdate(it.latitude, it.longitude)
+        }
+    }
+    @SuppressLint("MissingPermission")
+    fun doResartLocationUpdates() {
+        var locationCallback = object : LocationCallback() {
+            override fun onLocationResult(locationResult: LocationResult?) {
+                if (locationResult != null && locationResult.locations != null) {
+                    val l = locationResult.locations.last()
+                    locationUpdate(l.latitude, l.longitude)
+                }
+            }
+        }
+        if (!edit) {
+            locationService.requestLocationUpdates(locationRequest, locationCallback, null)
         }
     }
 

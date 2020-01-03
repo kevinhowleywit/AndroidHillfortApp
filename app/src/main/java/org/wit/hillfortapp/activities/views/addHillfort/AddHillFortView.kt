@@ -43,7 +43,8 @@ class AddHillFortView : BaseView(),AnkoLogger {
         presenter=initPresenter(AddHillfortPresenter(this)) as AddHillfortPresenter
 
         addMapView.onCreate(savedInstanceState)
-        addMapView.getMapAsync{presenter.doConfigureMap(it)}
+        addMapView.getMapAsync{presenter.doConfigureMap(it)
+        it.setOnMapClickListener { presenter.doSetLocation() }}
 
         addImgBtn.setOnClickListener{presenter.doSelectImage()}
         //locationBtn.setOnClickListener{presenter.doSetLocation()}
@@ -57,6 +58,8 @@ class AddHillFortView : BaseView(),AnkoLogger {
         if(hillfort.image != null){
             addImgBtn.setText(R.string.save_image)
         }
+        lat.setText("%.6f".format(hillfort.lat))
+        lng.setText("%.6f".format(hillfort.lng))
             //AddHf.setText(R.string.save_hillfort)
 
     }
@@ -113,6 +116,7 @@ class AddHillFortView : BaseView(),AnkoLogger {
     override fun onResume() {
         super.onResume()
         addMapView.onResume()
+        presenter.doResartLocationUpdates()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

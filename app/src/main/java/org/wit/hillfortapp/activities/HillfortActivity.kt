@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_hillfort.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
@@ -26,10 +27,10 @@ class HillfortActivity : AppCompatActivity(),AnkoLogger {
 
         super.onCreate(savedInstanceState)
         setContentView(org.wit.hillfortapp.R.layout.activity_hillfort)
-        //trying to clear activity history so when you press back it goes to login screen without going back to register on second press
-        //intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-
-
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user !=null){
+            emailTextView.setText("Welcome ${user.email}")
+        }
         addHfButton.setOnClickListener() {
 
             info { "Add hillfort button pressed" }
@@ -58,9 +59,9 @@ class HillfortActivity : AppCompatActivity(),AnkoLogger {
         when (item?.itemId) {
             org.wit.hillfortapp.R.id.item_map -> startActivity<HillfortMapsView>()
             org.wit.hillfortapp.R.id.item_logout -> {
+                FirebaseAuth.getInstance().signOut()
                 val intent = Intent(this, LoginView::class.java)
                 this.startActivity(intent)
-                this.finishAffinity()
             }
         }
 

@@ -26,7 +26,7 @@ class LoginPresenter(view: BaseView) : BasePresenter(view) {
         view?.showProgress()
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(view!!) { task ->
             if (task.isSuccessful) {
-                view?.navigateTo(VIEW.LIST)
+                view?.navigateTo(VIEW.HILLFORTACTIVITY)
             } else {
                 view?.toast("Sign Up Failed: ${task.exception?.message}")
             }

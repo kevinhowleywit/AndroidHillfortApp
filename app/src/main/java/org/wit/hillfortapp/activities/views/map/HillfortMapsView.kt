@@ -3,6 +3,7 @@ package org.wit.hillfortapp.activities.views.map
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import org.wit.hillfortapp.R
 
@@ -11,12 +12,14 @@ import kotlinx.android.synthetic.main.content_hillfort_maps.*
 import org.wit.hillfortapp.activities.views.map.HillfortMapPresenter
 import org.wit.hillfortapp.helpers.readImageFromPath
 import org.wit.hillfortapp.models.HillfortModel
+import org.wit.hillfortapp.models.Location
 
 class HillfortMapsView : AppCompatActivity(),GoogleMap.OnMarkerClickListener {
 
     //lateinit var map: GoogleMap
     //lateinit var app: MainApp
     lateinit var presenter: HillfortMapPresenter
+    var location = Location()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,9 +40,6 @@ class HillfortMapsView : AppCompatActivity(),GoogleMap.OnMarkerClickListener {
         currentDescription.text = hillfort.description
         currentImage.setImageBitmap(readImageFromPath(this, hillfort.image))
     }
-
-
-
 
 
     override fun onMarkerClick(marker: Marker): Boolean {

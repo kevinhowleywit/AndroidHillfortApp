@@ -27,9 +27,8 @@
 
             <EditText
                 android:id="@+id/hfName"
-                android:textAlignment="center"
-
                 android:layout_width="360dp"
+
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
@@ -37,15 +36,15 @@
                 android:ems="10"
                 android:hint="Hillfort Name"
                 android:inputType="text"
+                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/hfDesc"
-                android:textAlignment="center"
-
                 android:layout_width="360dp"
+
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
@@ -53,6 +52,7 @@
                 android:ems="10"
                 android:hint="Description"
                 android:inputType="textPersonName"
+                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/hfName" />
@@ -65,9 +65,9 @@
                 android:layout_marginTop="8dp"
                 android:text="Add Image"
                 app:layout_constraintEnd_toStartOf="@+id/locationBtn"
-                app:layout_constraintHorizontal_bias="0.013"
+                app:layout_constraintHorizontal_bias="0.014"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/AddHf" />
+                app:layout_constraintTop_toBottomOf="@+id/hfDesc" />
 
             <ImageView
                 android:id="@+id/hillfortImage"
@@ -90,8 +90,8 @@
                 android:layout_marginEnd="24dp"
                 android:text="Add Location"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/AddHf" />
-
+                app:layout_constraintTop_toBottomOf="@+id/hfDesc" />
+            <!--Your comment
             <Button
                 android:id="@+id/AddHf"
                 android:layout_width="360dp"
@@ -103,7 +103,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/hfDesc" />
-
+                -->
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </RelativeLayout>

@@ -3,7 +3,7 @@ package org.wit.hillfortapp.activities.views.addHillfort
 
 import android.content.Intent
 import org.jetbrains.anko.intentFor
-import org.wit.hillfortapp.activities.views.editLocation.EditLocationActivity
+import org.wit.hillfortapp.activities.views.editLocation.EditLocationView
 import org.wit.hillfortapp.helpers.showImagePicker
 import org.wit.hillfortapp.main.MainApp
 import org.wit.hillfortapp.models.Location
@@ -58,7 +58,7 @@ class AddHillfortPresenter(val view: AddHillFortView) {
             location.lng = hillfort.lng
             location.zoom = hillfort.zoom
         }
-        view.startActivityForResult(view.intentFor<EditLocationActivity>().putExtra("location", location), LOCATION_REQUEST)
+        view.startActivityForResult(view.intentFor<EditLocationView>().putExtra("location", location), LOCATION_REQUEST)
     }
 
     fun doActivityResult(requestCode: Int, resultCode: Int, data: Intent) {

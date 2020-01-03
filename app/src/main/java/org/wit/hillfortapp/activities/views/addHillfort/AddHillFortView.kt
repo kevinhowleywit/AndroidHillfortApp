@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_add_hill_fort.hfDesc
 import kotlinx.android.synthetic.main.activity_add_hill_fort.hfName
 import kotlinx.android.synthetic.main.activity_add_hill_fort.hillfortImage
 import kotlinx.android.synthetic.main.activity_add_hill_fort.locationBtn
+import kotlinx.android.synthetic.main.card_hillfort.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import org.jetbrains.anko.toast
@@ -38,7 +39,7 @@ class AddHillFortView : AppCompatActivity(),AnkoLogger {
             AddHillfortPresenter(
                 this
             )
-
+        /*
         AddHf.setOnClickListener(){
             info{"pressed addhf"}
 
@@ -53,13 +54,12 @@ class AddHillFortView : AppCompatActivity(),AnkoLogger {
             }
 
             else{
-
                 presenter.doAddOrSave(hillfort.name.toString(), hfDesc.text.toString())
                 setResult(AppCompatActivity.RESULT_OK)
                 finish()
 
             }
-        }
+        }*/
 
         addImgBtn.setOnClickListener{presenter.doSelectImage()}
         locationBtn.setOnClickListener{presenter.doSetLocation()}
@@ -91,7 +91,7 @@ class AddHillFortView : AppCompatActivity(),AnkoLogger {
         if(hillfort.image != null){
             addImgBtn.setText(R.string.save_image)
         }
-        AddHf.setText(R.string.save_hillfort)
+            //AddHf.setText(R.string.save_hillfort)
 
     }
 
@@ -107,6 +107,14 @@ class AddHillFortView : AppCompatActivity(),AnkoLogger {
                 presenter.doCancel()}
             R.id.item_delete ->{
                 presenter.doDelete()
+            }
+            R.id.item_save ->{
+                if(hfName.toString().isEmpty()){
+                    toast("Enter Title")
+                }
+                else{
+                    presenter.doAddOrSave(hfName.text.toString(),hfDesc.text.toString())
+                }
             }
         }
         return super.onOptionsItemSelected(item)

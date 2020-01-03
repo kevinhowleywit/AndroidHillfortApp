@@ -33,7 +33,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activities.views.editLocation.EditLocationActivity"
+            android:name=".activities.views.editLocation.EditLocationView"
             android:label="@string/title_activity_map" />
         <activity android:name=".activity_hill_fort_list" />
         <activity android:name=".activities.views.hillfortList.HillFortListView" />

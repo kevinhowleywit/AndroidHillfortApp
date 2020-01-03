@@ -7,10 +7,9 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
-import org.wit.hillfortapp.activities.views.editLocation.EditLocationActivity
 import org.wit.hillfortapp.models.Location
 
-class EditLocationPresenter(val view: EditLocationActivity) {
+class EditLocationPresenter(val view: EditLocationView) {
 
     var location = Location()
 

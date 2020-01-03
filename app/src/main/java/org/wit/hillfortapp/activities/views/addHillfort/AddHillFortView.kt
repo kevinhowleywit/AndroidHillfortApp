@@ -31,7 +31,7 @@ class AddHillFortView : BaseView(),AnkoLogger {
     //val IMAGE_REQUEST = 1
     //val LOCATION_REQUEST=2
     //var location = Location(52.3483333, -7.1252777,15f)
-    lateinit var map:GoogleMap
+    //lateinit var map:GoogleMap
     lateinit var presenter: AddHillfortPresenter
     var hillfort= HillfortModel()
 
@@ -41,33 +41,13 @@ class AddHillFortView : BaseView(),AnkoLogger {
         setContentView(R.layout.activity_add_hillfort_v2)
 
         presenter=initPresenter(AddHillfortPresenter(this)) as AddHillfortPresenter
+
         addMapView.onCreate(savedInstanceState)
-        addMapView.getMapAsync{
-            map=it
-            presenter.doConfigureMap(map)
-        }
+        addMapView.getMapAsync{presenter.doConfigureMap(it)}
 
         addImgBtn.setOnClickListener{presenter.doSelectImage()}
-        locationBtn.setOnClickListener{presenter.doSetLocation()}
-        /*
-        addOtherImageBtn.setOnClickListener(){
-            info("pressed add second image")
-            //showImagePicker(this,IMAGE_REQUEST)
-        }*/
+        //locationBtn.setOnClickListener{presenter.doSetLocation()}
 
-        /*
-        locationBtn.setOnClickListener{
-            info("set location pressed")
-            val location = Location(52.3483333, -7.1252777,15f)
-
-            if(hillfort.zoom != 0f){
-                location.lat=hillfort.lat
-                location.lng=hillfort.lng
-                location.zoom=hillfort.zoom
-
-            }
-            startActivityForResult(intentFor<MapActivity>().putExtra("location", location), LOCATION_REQUEST)
-        }*/
 
     }
     override fun showHillfort(hillfort:HillfortModel){
@@ -115,10 +95,32 @@ class AddHillFortView : BaseView(),AnkoLogger {
         }
 
     }
-
-    override fun onBackPressed() {
-        presenter.doCancel()
+    override fun onDestroy() {
+        super.onDestroy()
+        addMapView.onDestroy()
     }
+
+    override fun onLowMemory() {
+        super.onLowMemory()
+        addMapView.onLowMemory()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        addMapView.onPause()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        addMapView.onResume()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        addMapView.onSaveInstanceState(outState)
+    }
+
+
 
 
 }

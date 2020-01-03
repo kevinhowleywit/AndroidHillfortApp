@@ -65,8 +65,8 @@ open abstract class BaseView() : AppCompatActivity(), AnkoLogger {
         basePresenter?.doRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
-    open fun showPlacemark(hillfort: HillfortModel) {}
-    open fun showPlacemarks(hillforts: List<HillfortModel>) {}
+    open fun showHillfort(hillfort: HillfortModel) {}
+    open fun showHillforts(hillforts: List<HillfortModel>) {}
     open fun showProgress() {}
     open fun hideProgress() {}
 }

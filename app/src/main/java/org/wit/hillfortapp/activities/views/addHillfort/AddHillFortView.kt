@@ -5,29 +5,33 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import com.google.android.gms.maps.GoogleMap
 import kotlinx.android.synthetic.main.activity_add_hill_fort.AddHf
 import kotlinx.android.synthetic.main.activity_add_hill_fort.addImgBtn
 import kotlinx.android.synthetic.main.activity_add_hill_fort.hfDesc
 import kotlinx.android.synthetic.main.activity_add_hill_fort.hfName
 import kotlinx.android.synthetic.main.activity_add_hill_fort.hillfortImage
 import kotlinx.android.synthetic.main.activity_add_hill_fort.locationBtn
+import kotlinx.android.synthetic.main.activity_add_hillfort_v2.*
+import kotlinx.android.synthetic.main.activity_hillfort_maps.*
 import kotlinx.android.synthetic.main.card_hillfort.*
+import kotlinx.android.synthetic.main.content_hillfort_maps.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import org.jetbrains.anko.toast
 import org.wit.hillfortapp.R
+import org.wit.hillfortapp.activities.views.BaseView
 import org.wit.hillfortapp.helpers.readImageFromPath
 import org.wit.hillfortapp.models.HillfortModel
 
-class AddHillFortView : AppCompatActivity(),AnkoLogger {
-
-
+class AddHillFortView : BaseView(),AnkoLogger {
 
     //lateinit var app:MainApp
     //var edit=false
     //val IMAGE_REQUEST = 1
     //val LOCATION_REQUEST=2
     //var location = Location(52.3483333, -7.1252777,15f)
+    lateinit var map:GoogleMap
     lateinit var presenter: AddHillfortPresenter
     var hillfort= HillfortModel()
 
@@ -35,31 +39,13 @@ class AddHillFortView : AppCompatActivity(),AnkoLogger {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_hillfort_v2)
-        presenter=
-            AddHillfortPresenter(
-                this
-            )
-        /*
-        AddHf.setOnClickListener(){
-            info{"pressed addhf"}
 
-            val HillName=hfName.text.toString()
-            val HillDescription=hfDesc.text.toString()
-
-            hillfort.name=HillName
-            hillfort.description=HillDescription
-
-            if(HillName.isEmpty() || HillDescription.isEmpty()){
-                toast("Please fill out all fields")
-            }
-
-            else{
-                presenter.doAddOrSave(hillfort.name.toString(), hfDesc.text.toString())
-                setResult(AppCompatActivity.RESULT_OK)
-                finish()
-
-            }
-        }*/
+        presenter=initPresenter(AddHillfortPresenter(this)) as AddHillfortPresenter
+        addMapView.onCreate(savedInstanceState)
+        addMapView.getMapAsync{
+            map=it
+            presenter.doConfigureMap(map)
+        }
 
         addImgBtn.setOnClickListener{presenter.doSelectImage()}
         locationBtn.setOnClickListener{presenter.doSetLocation()}
@@ -84,7 +70,7 @@ class AddHillFortView : AppCompatActivity(),AnkoLogger {
         }*/
 
     }
-    fun showHillfort(hillfort:HillfortModel){
+    override fun showHillfort(hillfort:HillfortModel){
         hfName.setText(hillfort.name)
         hfDesc.setText(hillfort.description)
         hillfortImage.setImageBitmap(readImageFromPath(this,hillfort.image))
@@ -130,10 +116,9 @@ class AddHillFortView : AppCompatActivity(),AnkoLogger {
 
     }
 
-
-
-
-
+    override fun onBackPressed() {
+        presenter.doCancel()
+    }
 
 
 }

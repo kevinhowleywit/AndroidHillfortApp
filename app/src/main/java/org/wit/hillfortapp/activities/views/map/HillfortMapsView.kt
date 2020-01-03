@@ -9,14 +9,15 @@ import org.wit.hillfortapp.R
 
 import kotlinx.android.synthetic.main.activity_hillfort_maps.*
 import kotlinx.android.synthetic.main.content_hillfort_maps.*
+import org.wit.hillfortapp.activities.views.BaseView
 import org.wit.hillfortapp.activities.views.map.HillfortMapPresenter
 import org.wit.hillfortapp.helpers.readImageFromPath
 import org.wit.hillfortapp.models.HillfortModel
 import org.wit.hillfortapp.models.Location
 
-class HillfortMapsView : AppCompatActivity(),GoogleMap.OnMarkerClickListener {
+class HillfortMapsView :BaseView(),GoogleMap.OnMarkerClickListener {
 
-    //lateinit var map: GoogleMap
+    lateinit var map: GoogleMap
     //lateinit var app: MainApp
     lateinit var presenter: HillfortMapPresenter
     var location = Location()
@@ -24,23 +25,27 @@ class HillfortMapsView : AppCompatActivity(),GoogleMap.OnMarkerClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hillfort_maps)
-        setSupportActionBar(toolbar)
-        presenter=
-            HillfortMapPresenter(this)
+        super.init(toolbar)
+
+
+        presenter=initPresenter(HillfortMapPresenter(this)) as HillfortMapPresenter
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync {
-            presenter.doPopulateMap(it)
+            map=it
+            map.setOnMarkerClickListener(this)
+            presenter.loadHillforts()
         }
-
-
     }
 
-    fun showHillfort(hillfort: HillfortModel) {
+    override fun showHillfort(hillfort: HillfortModel) {
         currentTitle.text = hillfort.name
         currentDescription.text = hillfort.description
         currentImage.setImageBitmap(readImageFromPath(this, hillfort.image))
     }
+    override fun showHillforts(hillforts: List<HillfortModel>) {
+        presenter.doPopulateMap(map, hillforts)
 
+    }
 
     override fun onMarkerClick(marker: Marker): Boolean {
         presenter.doMarkerSelected(marker)
@@ -70,6 +75,8 @@ class HillfortMapsView : AppCompatActivity(),GoogleMap.OnMarkerClickListener {
         super.onSaveInstanceState(outState)
         mapView.onSaveInstanceState(outState)
     }
+
+
 
 
 }

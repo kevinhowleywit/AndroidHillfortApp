@@ -7,28 +7,26 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.Marker
 import org.wit.hillfortapp.R
+import org.wit.hillfortapp.activities.views.BaseView
 
-class EditLocationView : AppCompatActivity(), GoogleMap.OnMarkerDragListener,GoogleMap.OnMarkerClickListener {
+class EditLocationView : BaseView(), GoogleMap.OnMarkerDragListener,GoogleMap.OnMarkerClickListener {
 
     private lateinit var map: GoogleMap
     //var location = Location()
     lateinit var presenter: EditLocationPresenter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map)
         //location = intent.extras?.getParcelable<Location>("location")!!
-        val mapFragment = supportFragmentManager
-            .findFragmentById(R.id.map) as SupportMapFragment
-        presenter=
-            EditLocationPresenter(
-                this
-            )
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+        presenter= EditLocationPresenter(this)
 
         mapFragment.getMapAsync{
             map=it
             map.setOnMarkerDragListener(this)
             map.setOnMarkerClickListener(this)
-            presenter.initMap(map)
+            presenter.doConfigureMap(map)
         }
     }
     override fun onMarkerDragStart(marker: Marker) {
@@ -39,7 +37,7 @@ class EditLocationView : AppCompatActivity(), GoogleMap.OnMarkerDragListener,Goo
         presenter.doUpdateLocation(marker.position.latitude,marker.position.longitude,map.cameraPosition.zoom)
     }
     override fun onBackPressed() {
-        presenter.doOnBackPressed()
+        presenter.doSave()
     }
     override fun onMarkerClick(marker: Marker): Boolean {
         presenter.doUpdateMarker(marker)

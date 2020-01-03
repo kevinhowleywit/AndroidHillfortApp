@@ -8,22 +8,17 @@ import org.wit.hillfortapp.R
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_hill_fort_list.*
 import org.wit.hillfortapp.models.HillfortModel
+import org.wit.hillfortapp.activities.views.BaseView
 
-
-class HillFortListView : AppCompatActivity(),
-    HillfortListener {
+class HillFortListView : BaseView(), HillfortListener {
 
     //lateinit var app:MainApp
     lateinit var presenter: HillfortListPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hill_fort_list)
-        presenter=
-            HillfortListPresenter(
-                this
-            )
+        presenter=initPresenter(HillfortListPresenter(this)) as HillfortListPresenter
         val layoutManager=LinearLayoutManager(this)
         recyclerView.layoutManager=layoutManager
         recyclerView.adapter=
@@ -34,6 +29,14 @@ class HillFortListView : AppCompatActivity(),
         recyclerView.adapter?.notifyDataSetChanged()
 
         loadHillforts()
+    }
+    override fun showHillforts (hillforts: List<HillfortModel>) {
+        recyclerView.adapter =
+            HillfortAdapter(
+                hillforts,
+                this
+            )
+        recyclerView.adapter?.notifyDataSetChanged()
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_hf_list, menu)
@@ -65,14 +68,7 @@ class HillFortListView : AppCompatActivity(),
         showHillforts(presenter.getHillforts())
     }
 
-    fun showHillforts (hillforts: List<HillfortModel>) {
-        recyclerView.adapter =
-            HillfortAdapter(
-                hillforts,
-                this
-            )
-        recyclerView.adapter?.notifyDataSetChanged()
-    }
+
 
 
 

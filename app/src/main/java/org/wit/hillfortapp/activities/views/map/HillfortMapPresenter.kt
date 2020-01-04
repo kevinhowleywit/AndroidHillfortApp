@@ -30,13 +30,10 @@ class HillfortMapPresenter(view:BaseView):BasePresenter(view) {
     }
 
     fun doMarkerSelected(marker: Marker) {
-        val tag = marker.tag as Long
-        doAsync {
-            val hillfort = marker.tag as HillfortModel
-            uiThread {
-                if (hillfort != null) view?.showHillfort(hillfort)
-            }
-        }
+        val hillfort = marker.tag as HillfortModel
+        view?.showHillfort(hillfort)
+
+
 
     }
     fun loadHillforts() {

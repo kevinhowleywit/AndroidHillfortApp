@@ -58,7 +58,9 @@ class HillfortActivity : AppCompatActivity(),AnkoLogger {
 
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        app=application as MainApp
         when (item?.itemId) {
+
             org.wit.hillfortapp.R.id.item_map -> startActivity<HillfortMapsView>()
             org.wit.hillfortapp.R.id.item_logout -> {
                 FirebaseAuth.getInstance().signOut()

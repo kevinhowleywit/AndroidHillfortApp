@@ -47,6 +47,8 @@ open abstract class BaseView() : AppCompatActivity(), AnkoLogger {
         toolbar.title = title
         setSupportActionBar(toolbar)
     }
+    open fun showLocation(latitude : Double, longitude : Double) {}
+
 
     override fun onDestroy() {
         basePresenter?.onDestroy()

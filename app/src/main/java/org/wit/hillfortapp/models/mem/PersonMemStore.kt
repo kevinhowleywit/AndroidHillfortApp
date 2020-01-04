@@ -1,9 +1,11 @@
-package org.wit.hillfortapp.models
+package org.wit.hillfortapp.models.mem
 
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
+import org.wit.hillfortapp.models.PersonModel
+import org.wit.hillfortapp.models.PersonStore
 
-class PersonMemStore:PersonStore,AnkoLogger{
+class PersonMemStore: PersonStore,AnkoLogger{
 
     val people=ArrayList<PersonModel>()
 
@@ -29,7 +31,7 @@ class PersonMemStore:PersonStore,AnkoLogger{
     }
 
     override fun update(person: PersonModel) {
-        var foundPerson:PersonModel?=people.find { p -> p.id==person.id }
+        var foundPerson: PersonModel?=people.find { p -> p.id==person.id }
 
         if (foundPerson!= null){
             foundPerson.email=person.email

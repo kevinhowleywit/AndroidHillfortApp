@@ -1,9 +1,11 @@
-package org.wit.hillfortapp.models
+package org.wit.hillfortapp.models.mem
 
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
+import org.wit.hillfortapp.models.HillfortModel
+import org.wit.hillfortapp.models.HillfortStore
 
-class HillfortMemStore:HillfortStore,AnkoLogger{
+class HillfortMemStore: HillfortStore,AnkoLogger{
 
     val hillforts=ArrayList<HillfortModel>()
     override fun findAll(): List<HillfortModel> {
@@ -20,7 +22,7 @@ class HillfortMemStore:HillfortStore,AnkoLogger{
     }
 
     override fun update(hillfort: HillfortModel) {
-        var foundHillfort:HillfortModel?=hillforts.find { p -> p.id==hillfort.id }
+        var foundHillfort: HillfortModel?=hillforts.find { p -> p.id==hillfort.id }
 
         if (foundHillfort!= null){
             foundHillfort.name=hillfort.name

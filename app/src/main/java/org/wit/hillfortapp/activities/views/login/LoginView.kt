@@ -3,6 +3,7 @@ package org.wit.hillfortapp.activities.views.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import kotlinx.android.synthetic.main.activity_hillfort_maps.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.emailText
@@ -26,6 +27,8 @@ class LoginView : BaseView() ,AnkoLogger{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        progressBar.visibility = View.GONE
+
         //init(toolbar, false)
 
         presenter = initPresenter(LoginPresenter(this)) as LoginPresenter
@@ -52,11 +55,13 @@ class LoginView : BaseView() ,AnkoLogger{
             }
         }
     }
+    override fun showProgress() {
+        progressBar.visibility = View.VISIBLE
+    }
 
-
-
-
-
+    override fun hideProgress() {
+        progressBar.visibility = View.GONE
+    }
     // on back pressed brings you to home instead of the splash screen
     override fun onBackPressed() {
         this.finishAffinity()

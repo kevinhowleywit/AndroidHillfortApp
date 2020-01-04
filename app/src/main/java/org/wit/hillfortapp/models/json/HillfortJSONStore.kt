@@ -64,6 +64,9 @@ class HillfortJSONStore : HillfortStore, AnkoLogger {
         hillforts.remove(hillfort)
         serialize()
     }
+    override fun clear(){
+        hillforts.clear()
+    }
 
 
     fun logAll(){

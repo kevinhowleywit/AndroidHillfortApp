@@ -15,10 +15,12 @@ import org.wit.hillfortapp.activities.views.addHillfort.AddHillFortView
 import org.wit.hillfortapp.activities.views.hillfortList.HillFortListView
 import org.wit.hillfortapp.activities.views.login.LoginView
 import org.wit.hillfortapp.activities.views.map.HillfortMapsView
+import org.wit.hillfortapp.main.MainApp
 
 
 class HillfortActivity : AppCompatActivity(),AnkoLogger {
 
+    lateinit var app: MainApp
 
     var hillfort = HillfortModel()
     var hillforts = ArrayList<HillfortModel>()
@@ -60,21 +62,13 @@ class HillfortActivity : AppCompatActivity(),AnkoLogger {
             org.wit.hillfortapp.R.id.item_map -> startActivity<HillfortMapsView>()
             org.wit.hillfortapp.R.id.item_logout -> {
                 FirebaseAuth.getInstance().signOut()
+
                 val intent = Intent(this, LoginView::class.java)
                 this.startActivity(intent)
+                app.hillforts.clear()
             }
         }
 
         return super.onOptionsItemSelected(item)
     }
-
-
-
-
-
-
 }
-
-/*val intent = Intent(this, LoginActivity::class.java)
-                this.startActivity(intent)
-                this.finishAffinity()          }*/

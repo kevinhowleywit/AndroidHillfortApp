@@ -8,10 +8,12 @@ import androidx.room.PrimaryKey
 @Parcelize
 @Entity
 data class HillfortModel(@PrimaryKey(autoGenerate = true)
-    var id:Long=0,
-     var name:String="",
-     var description:String="",
-     var image:String="", @Embedded var location : Location = Location()): Parcelable
+
+        var id:Long=0,
+        var fbId : String = "",
+        var name:String="",
+        var description:String="",
+        var image:String="", @Embedded var location : Location = Location()): Parcelable
 
 
 @Parcelize

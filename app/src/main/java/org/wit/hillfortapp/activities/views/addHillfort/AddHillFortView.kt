@@ -23,6 +23,7 @@ import org.wit.hillfortapp.R
 import org.wit.hillfortapp.activities.views.BaseView
 import org.wit.hillfortapp.helpers.readImageFromPath
 import org.wit.hillfortapp.models.HillfortModel
+import org.wit.hillfortapp.models.Location
 
 class AddHillFortView : BaseView(),AnkoLogger {
 
@@ -58,10 +59,15 @@ class AddHillFortView : BaseView(),AnkoLogger {
         if(hillfort.image != null){
             addImgBtn.setText(R.string.save_image)
         }
-        lat.setText("%.6f".format(hillfort.lat))
-        lng.setText("%.6f".format(hillfort.lng))
+        this.showLocation(hillfort.location)
+        //lat.setText("%.6f".format(hillfort.lat))
+        //lng.setText("%.6f".format(hillfort.lng))
             //AddHf.setText(R.string.save_hillfort)
 
+    }
+    override fun showLocation(location: Location) {
+        lat.setText("%.6f".format(location.lat))
+        lng.setText("%.6f".format(location.lng))
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

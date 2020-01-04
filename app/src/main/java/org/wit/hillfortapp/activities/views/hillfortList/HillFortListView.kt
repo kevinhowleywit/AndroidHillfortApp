@@ -18,17 +18,15 @@ class HillFortListView : BaseView(), HillfortListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hill_fort_list)
+
         presenter=initPresenter(HillfortListPresenter(this)) as HillfortListPresenter
+
         val layoutManager=LinearLayoutManager(this)
         recyclerView.layoutManager=layoutManager
-        recyclerView.adapter=
-            HillfortAdapter(
-                presenter.getHillforts(),
-                this
-            )
-        recyclerView.adapter?.notifyDataSetChanged()
+        //recyclerView.adapter= HillfortAdapter(presenter.loadHillforts(), this)
+        //recyclerView.adapter?.notifyDataSetChanged()
 
-        loadHillforts()
+        presenter.loadHillforts()
     }
     override fun showHillforts (hillforts: List<HillfortModel>) {
         recyclerView.adapter =
@@ -59,14 +57,14 @@ class HillFortListView : BaseView(), HillfortListener {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        loadHillforts()
+        presenter.loadHillforts()
         recyclerView.adapter?.notifyDataSetChanged()
         super.onActivityResult(requestCode, resultCode, data)
     }
 
-    private fun loadHillforts() {
+    /*private fun loadHillforts() {
         showHillforts(presenter.getHillforts())
-    }
+    }*/
 
 
 

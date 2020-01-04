@@ -14,6 +14,7 @@ import org.wit.hillfortapp.activities.views.map.HillfortMapsView
 import org.wit.hillfortapp.activities.views.addHillfort.AddHillFortView
 import org.wit.hillfortapp.activities.views.hillfortList.HillFortListView
 import org.wit.hillfortapp.activities.views.login.LoginView
+import org.wit.hillfortapp.models.Location
 
 val IMAGE_REQUEST = 1
 val LOCATION_REQUEST = 2
@@ -51,7 +52,6 @@ open abstract class BaseView() : AppCompatActivity(), AnkoLogger {
         toolbar.title = title
         setSupportActionBar(toolbar)
     }
-    open fun showLocation(latitude : Double, longitude : Double) {}
 
 
     override fun onDestroy() {
@@ -75,4 +75,7 @@ open abstract class BaseView() : AppCompatActivity(), AnkoLogger {
     open fun showHillforts(hillforts: List<HillfortModel>) {}
     open fun showProgress() {}
     open fun hideProgress() {}
+    open fun showLocation(location:Location) {}
+
+
 }

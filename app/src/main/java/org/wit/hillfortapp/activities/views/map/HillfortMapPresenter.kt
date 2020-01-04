@@ -5,6 +5,8 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.uiThread
 import org.wit.hillfortapp.activities.views.BasePresenter
 import org.wit.hillfortapp.activities.views.BaseView
 import org.wit.hillfortapp.main.MainApp
@@ -18,10 +20,10 @@ class HillfortMapPresenter(view:BaseView):BasePresenter(view) {
 
         map.uiSettings.setZoomControlsEnabled(true)
         hillforts.forEach{
-            val loc = LatLng(it.lat, it.lng)
+            val loc = LatLng(it.location.lat, it.location.lng)
             val options = MarkerOptions().title(it.name).position(loc).snippet("GPS : " + loc.toString())
             map.addMarker(options).tag = it.id
-            map.moveCamera(CameraUpdateFactory.newLatLngZoom(loc, it.zoom))
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(loc, it.location.zoom))
 
         }
 
@@ -29,10 +31,20 @@ class HillfortMapPresenter(view:BaseView):BasePresenter(view) {
 
     fun doMarkerSelected(marker: Marker) {
         val tag = marker.tag as Long
-        val hillfort = app.hillforts.findById(tag)
-        if (hillfort != null) view?.showHillfort(hillfort)
+        doAsync {
+            val hillfort = app.hillforts.findById(tag)
+            uiThread {
+                if (hillfort != null) view?.showHillfort(hillfort)
+            }
+        }
+
     }
     fun loadHillforts() {
-        view?.showHillforts(app.hillforts.findAll())
+        doAsync {
+            val hillforts=app.hillforts.findAll()
+            uiThread {
+                view?.showHillforts(hillforts)
+            }
+        }
     }
 }

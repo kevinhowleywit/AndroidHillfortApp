@@ -1,8 +1,6 @@
 package org.wit.hillfortapp.activities.views.hillfortList
 
-import org.jetbrains.anko.intentFor
-import org.jetbrains.anko.startActivity
-import org.jetbrains.anko.startActivityForResult
+import org.jetbrains.anko.*
 import org.wit.hillfortapp.activities.views.map.HillfortMapsView
 import org.wit.hillfortapp.activities.views.addHillfort.AddHillFortView
 import org.wit.hillfortapp.main.MainApp
@@ -17,7 +15,14 @@ class HillfortListPresenter(view: BaseView):BasePresenter(view) {
     fun doAddHillfort(){
         view?.navigateTo(VIEW.HILLFORT)
     }
-    fun getHillforts() = app.hillforts.findAll()
+    fun getHillforts(){
+        doAsync {
+            val hillforts = app.hillforts.findAll()
+            uiThread {
+                view?.showHillforts(hillforts)
+            }
+        }
+    }
 
 
 
@@ -29,6 +34,13 @@ class HillfortListPresenter(view: BaseView):BasePresenter(view) {
         view?.navigateTo(VIEW.MAPS)
     }
     fun loadHillforts(){
-        view?.showHillforts(app.hillforts.findAll())
+        doAsync {
+            val hillforts = app.hillforts.findAll()
+            uiThread {
+                view?.showHillforts(hillforts)
+            }
+        }
+        //view?.showHillforts(app.hillforts.findAll())
+
     }
 }

@@ -22,7 +22,7 @@ class LoginPresenter(view: BaseView) : BasePresenter(view) {
         auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(view!!) { task ->
             if (task.isSuccessful) {
                 if (fireStore != null) {
-                    fireStore!!.fetchHillforts {
+                    fireStore!!.fetchhillforts {
                         view?.hideProgress()
                         view?.navigateTo(VIEW.HILLFORTACTIVITY)
                     }

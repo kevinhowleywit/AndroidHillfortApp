@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import com.bumptech.glide.Glide
 import com.google.android.gms.maps.GoogleMap
 import kotlinx.android.synthetic.main.activity_add_hill_fort.AddHf
 import kotlinx.android.synthetic.main.activity_add_hill_fort.addImgBtn
@@ -55,7 +56,7 @@ class AddHillFortView : BaseView(),AnkoLogger {
     override fun showHillfort(hillfort:HillfortModel){
         hfName.setText(hillfort.name)
         hfDesc.setText(hillfort.description)
-        hillfortImage.setImageBitmap(readImageFromPath(this,hillfort.image))
+        Glide.with(this).load(hillfort.image).into(hillfortImage);
         if(hillfort.image != null){
             addImgBtn.setText(R.string.save_image)
         }

@@ -1,3 +1,3 @@
 # AndroidHillfortApp
 
-First assignment for Android development module
+Assignment For Android Development module 
